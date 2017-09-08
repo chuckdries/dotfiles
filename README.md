@@ -1,7 +1,7 @@
 # dotfiles
 My configuration files, mostly leaving here for my own use
 
-my home folder is a git repo with `*` in its `.gitignore`.
+My home folder is a git repo with `*` in its `.gitignore`.
 
 Eventually, I'll move to [this neater method I say on hacker news](https://developer.atlassian.com/blog/2016/02/best-way-to-store-dotfiles-git-bare-repo/).
 
