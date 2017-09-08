@@ -40,4 +40,4 @@ alias plr='cd /usr/local/lib/python2.7/site-packages/powerline'
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 #Permissions:
-umask 000
+umask 002
