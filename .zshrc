@@ -21,23 +21,31 @@ source $ZSH/oh-my-zsh.sh
 
 # zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+export PATH="$PATH:$HOME/.rvm/bin:$HOME/Library/Python/2.7/bin" # Add RVM to PATH for scripting
+source ./zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+#source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Use correct vim!
-alias vim='/usr/local/bin/vim'
+# alias vim='/usr/local/bin/vim' #why did I do this again?
 # give tmux color!
 alias tmux='TERM=xterm-256color tmux'
 # convenience!
 alias asugen='ssh cpdries@general.asu.edu'
 alias gryphon='ssh aspchuck@extern-0385728277e266af6.getsnworks.com'
 # My own damn sanity
-alias plr='cd /usr/local/lib/python2.7/site-packages/powerline'
+alias plr='cd /Users/chuckdries/Library/Python/2.7/lib/python/site-packages/powerline'
+# dotfile config
+alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 #finally, call powerline!
-. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+#. /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+. /Users/chuckdries/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 #Permissions:
 umask 002
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -18,8 +18,6 @@
 			},
 			{
 				"function": "powerline.segments.shell.cwd",
-                                "args":{"dir_limit_depth":3,
-                                        "dir_shorten_len":1},
 				"priority": 10
 			},
 			{
