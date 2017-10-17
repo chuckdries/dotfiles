@@ -9,9 +9,9 @@ let g:user_emmet_install_global = 0 "turn emmet off by default
 autocmd FileType html,css,vue EmmetInstall "turn it back on for HTML and CSS only
 
 " load PowerLine
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
+" python from powerline.vim import setup as powerline_setup
+" python powerline_setup()
+" python del powerline_setup
 set laststatus=2
 set showtabline=2 " Always display the tabline, even if there is only one tab
 set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
