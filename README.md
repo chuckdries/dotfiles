@@ -12,8 +12,6 @@ Install pathogen and necessary plugins
 
 Install Oh My ZSH
 
-Install powerline-status with --user
-
 The powerline stuff is special because powerline stores its config files in a subdirectory of wherever pip installs it, so you need to symlink it. `rm -R powerlinedir/config_files && ln -s ~/.powerline powerlinedir/config_files`
 
 
