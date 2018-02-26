@@ -25,5 +25,3 @@ bspc rule -a Screenkey manage=off
 
 #mouse focus
 bspc config focus_follows_pointer true
-#bspc config pointer_follows_focus   true
-#bspc config pointer_follows_monitor true
