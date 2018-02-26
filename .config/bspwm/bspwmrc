@@ -4,6 +4,7 @@ sxhkd -c ~/.config/sxhkd/sxhkdrc &
 #TK start albert and compton
 compton &
 albert &
+~/.config/bspwm/floating.sh &
 
 #TK monitor stuff
 #bspc monitor -d I II III IV V VI VII VIII IX X
@@ -25,3 +26,6 @@ bspc rule -a Screenkey manage=off
 
 #mouse focus
 bspc config focus_follows_pointer true
+bspc config pointer_follows_focus true
+bspc config pointer_follows_monitor true
+
