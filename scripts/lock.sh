@@ -5,8 +5,8 @@ tmpbg='/tmp/screen.png'
 
 (( $# )) && { icon=$1; }
 
-maim "$tmpbg"
-gm convert "$tmpbg" -scale 10% -scale 1000% "$tmpbg"
-gm composite "$icon" "$tmpbg" -gravity East -geometry +1100 -matte "$tmpbg"
-i3lock -u -i "$tmpbg"
+maim -f png -m 1\
+    | gm convert - -scale 10% -scale 1000% miff:-\
+    | gm composite "$icon" miff:- -gravity East -geometry +1100 -matte png:"$tmpbg"
 
+i3lock -u -i "$tmpbg"
