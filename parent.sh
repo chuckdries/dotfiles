@@ -1,7 +1,6 @@
-((NUM = $1 - 1))
 STR="@parent";
-for ((i=1;i<=$NUM;i++))
+for ((i=1;i<=$1;i++))
 do
     STR+="/parent"
 done
-echo $STR
+bspc node -f $STR
