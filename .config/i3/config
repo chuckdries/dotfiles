@@ -44,10 +44,10 @@ bindsym $mod+Shift+q kill
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
 #TK disable border for i3-gaps
-for_window [class="^.*"] border pixel 0
+#for_window [class="^.*"] border pixel 0
 
 #TK enable gaps
-gaps inner 20
+#gaps inner 20
 
 # change focus
 bindsym $mod+j focus left

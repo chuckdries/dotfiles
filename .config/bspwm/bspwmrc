@@ -5,6 +5,7 @@ sxhkd -c ~/.config/sxhkd/sxhkdrc &
 compton &
 albert &
 ~/.config/bspwm/floating.sh &
+#xfce4-panel
 
 #TK monitor stuff
 #bspc monitor -d I II III IV V VI VII VIII IX X
@@ -13,6 +14,7 @@ bspc monitor DP-4 -d V VI VII VII
 
 bspc config border_width         2
 bspc config window_gap          20
+bspc config top_padding         18
 
 bspc config split_ratio          0.52
 bspc config borderless_monocle   true
@@ -26,6 +28,7 @@ bspc rule -a Screenkey manage=off
 
 #mouse focus
 bspc config focus_follows_pointer true
-bspc config pointer_follows_focus true
+bspc config pointer_follows_focus false
 bspc config pointer_follows_monitor true
 
+/home/chuckdries/.config/bar/panel &
