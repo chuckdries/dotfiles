@@ -53,3 +53,9 @@ export NVM_DIR="$HOME/.nvm"
 
 alias openmail='firefox inbox.google.com'
 alias opengithub='firefox github.com/notifications'
+
+export GPG_TTY=$(tty)
+gpg-connect-agent updatestartuptty /bye
+unset SSH_AGENT_PID
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+
