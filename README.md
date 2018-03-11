@@ -16,9 +16,13 @@ VIM: pathogen and necessary plugins
 OTHER:
  - zsh
  - [Oh My ZSH](https://github.com/robbyrussell/oh-my-zsh)
- - [zsh syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md)
+ - [zsh syntax highlighting](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md) 
+ 
+ WM stuff:  
  - i3-gaps
  - bspwm
  - albert
  - compton
 
+### SSH keys 
+I do this on every machine http://www.engineerbetter.com/blog/yubikey-ssh/
