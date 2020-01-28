@@ -1,0 +1,39 @@
+add_newline = false
+prompt_order = [
+    "cmd_duration",
+    "time",
+    "line_break",
+    "line_break",
+    "username",
+    "hostname",
+    "kubernetes",
+    "directory",
+    "git_branch",
+    "git_state",
+    "git_status",
+    "package",
+    "dotnet",
+    "golang",
+    "java",
+    "nodejs",
+    "python",
+    "ruby",
+    "rust",
+    "nix_shell",
+    "conda",
+    "memory_usage",
+    "aws",
+    "env_var",
+    "jobs",
+    "battery",
+    "line_break",
+    "character",
+]
+
+[time]
+disabled = false
+use_12hr = true
+
+[cmd_duration]
+style = "bright-blue"
+
