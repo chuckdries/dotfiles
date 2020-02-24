@@ -9,8 +9,13 @@ call plug#begin()
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'preservim/nerdcommenter'
+Plug 'dense-analysis/ale'
+Plug 'zivyangll/git-blame.vim'
+Plug 'luochen1990/rainbow'
 call plug#end()
 filetype plugin indent on
+let g:rainbow_active = 1
 
 " settings
 syntax on
@@ -24,10 +29,13 @@ colo desert
 set tabstop=2 shiftwidth=2 expandtab
 
 "key binds
-nmap <F12> <Plug>(coc-definition)
-map <C-o> :Files<CR>
-map <C-p> :NERDTreeToggle<CR>
-map <C-i> :RG<CR>
+map <F12> <Plug>(coc-definition)
+map <F2> <Plug>(coc-rename)
+map <C-f> :RG<CR>
+map <C-p> :Files<CR>
+map <C-b> :NERDTreeToggle<CR>
+map <C-_> <Plug>NERDCommenterToggle<CR>
+nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
 function! RipgrepFzf(query, fullscreen)
   let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case %s || true'
