@@ -10,6 +10,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdcommenter'
+" TODO: comment toggle (<leader>c<space>) doesn't work
 Plug 'dense-analysis/ale'
 Plug 'zivyangll/git-blame.vim'
 Plug 'luochen1990/rainbow'
