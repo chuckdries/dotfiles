@@ -10,6 +10,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdcommenter'
+"Plug 'vbe0201/vimdiscord'
+"Plug 'anned20/vimsence'
+"Plug 'hugolgst/vimsence'
 " TODO: comment toggle (<leader>c<space>) doesn't work
 Plug 'dense-analysis/ale'
 Plug 'zivyangll/git-blame.vim'
@@ -37,6 +40,29 @@ map <C-p> :Files<CR>
 map <C-b> :NERDTreeToggle<CR>
 map <C-_> <Plug>NERDCommenterToggle<CR>
 nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
+nmap <F8> <Plug>(ale_fix)
+
+""" from coc readme
+set updatetime=300
+set cmdheight=2
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+""" end coc readme section
 
 function! RipgrepFzf(query, fullscreen)
   let command_fmt = 'rg --column --line-number --no-heading --color=always --smart-case %s || true'
